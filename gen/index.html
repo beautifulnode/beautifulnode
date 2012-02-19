@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>BeautifulNode</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="/stylesheets/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="/stylesheets/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/stylesheets/github.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/bootstrap-apple-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/bootstrap-apple-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/bootstrap-apple-114x114.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Beautiful Node</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="hero-unit">
+        <h1>Beautiful Node</h1>
+        <p>Where CoffeeScript and NodeJs meet to create awesomeness!</p>
+        <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+      </div>
+      <div class='row'>
+        <div class="span8 offset2 github">
+        <h1>Hello World</h1>
+
+<p>by <a href="http://twitter.com/twilson63">@twilson63</a></p>
+
+<p>posted 2012-02-18</p>
+
+<h2>Introduction</h2>
+
+<p>A nodejs and coffeescript hello world tutorial.</p>
+
+<h2>Requirements</h2>
+
+<p><a href="http://nodejs.org">nodejs</a></p>
+
+<h2>Install CoffeeScript</h2>
+
+<div class="highlight"><pre lang=" sh">npm install coffee-script -g
+</pre></div>
+
+<h2>Code</h2>
+
+<p>Lets go ahead and create our first web server using nodejs and coffeescript.</p>
+
+<p>In your favorite text editor type the following:</p>
+
+<div class="highlight"><pre lang=" coffeescript">http = require 'http'
+
+server = http.createServer (request, response) ->
+  response.writeHead 200, 'Content-Type: text/plain'
+  response.end 'Hello World'
+
+server.listen 3000, console.log 'listening on 3000...'
+</pre></div>
+
+<p>Save the file as server.coffee.</p>
+
+<p>Open a command prompt in the directory that the server.coffee file is in.</p>
+
+<p>Run the following:</p>
+
+<div class="highlight"><pre lang=" sh">coffee server.coffee
+</pre></div>
+
+<p>You should see the prompt return "listening on 3000...", now you should be able to open a browser at '<a href='http://localhost:3000'>http://localhost:3000</a>' and see 'Hello World'.</p>
+
+<p>Congratulations! You just created your first nodejs web server.</p>
+
+<p>Press CTRL-C in the command window to stop the server.</p>
+
+<h2>Compile the server</h2>
+
+<p>Lets compile your coffeescript into javascript.</p>
+
+<p>In the command window we will execute the coffee command we did previously, but this time we will add a -c flag to tell coffeescript to compile the coffee file to a javascript file.</p>
+
+<div class="highlight"><pre lang=" sh">coffee -c server.coffee
+</pre></div>
+
+<p>This will create a new file in the same directory called 'server.js'.  You can open server.js and you should see the generated javascript like this.</p>
+
+<div class="highlight"><pre lang=" javascript">var http, server;
+
+http = require('http');
+
+server = http.createServer(function(request, response) {
+  response.writeHead(200, 'Content-Type: text/plain');
+  return response.end('Hello World');
+});
+
+server.listen(3000, console.log('listening on 3000...'));
+</pre></div>
+        </div>
+      </div>
+      <hr>
+      <footer>
+        <p>&copy; BeautifulNode 2012</p>
+      </footer>
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/javascripts/jquery.js"></script>
+    <script src="/javascripts/bootstrap-transition.js"></script>
+    <script src="/javascripts/bootstrap-alert.js"></script>
+    <script src="/javascripts/bootstrap-modal.js"></script>
+    <script src="/javascripts/bootstrap-dropdown.js"></script>
+    <script src="/javascripts/bootstrap-scrollspy.js"></script>
+    <script src="/javascripts/bootstrap-tab.js"></script>
+    <script src="/javascripts/bootstrap-tooltip.js"></script>
+    <script src="/javascripts/bootstrap-popover.js"></script>
+    <script src="/javascripts/bootstrap-button.js"></script>
+    <script src="/javascripts/bootstrap-collapse.js"></script>
+    <script src="/javascripts/bootstrap-carousel.js"></script>
+    <script src="/javascripts/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>
